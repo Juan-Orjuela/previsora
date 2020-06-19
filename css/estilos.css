@@ -12,9 +12,9 @@ body {
 
 /*Banner*/
 #banner {
-    background: #004a28 url('../img/fondo-banner-previsora.jpg') no-repeat center;
+    background: #004a28 url('../img/fondo-banner-previsora.jpg') no-repeat center 10%;
     background-size: cover;
-    padding: 15vh 0 5vh;
+    padding: 15vh 0 10vh;
 }
 
 #banner .row {
@@ -323,10 +323,41 @@ h5 {
 }
 footer p, footer a {
     font-size: .8rem;
+    transition: color .7s ease;
+}
+footer a:hover {
+    color: #00b433;
 }
 footer a {
     color: white;
     text-decoration: underline;
     display: block;
     margin-bottom: 1rem;
+}
+footer p {
+    position: relative;
+}
+footer p:before {
+    content: "";
+    position: absolute;
+    width:  25px;
+    height: 25px;
+    background: #00b433 no-repeat center;
+    background-size: contain;
+    left: -30px;
+    border-radius: 100%;
+    top: -5px;
+}
+footer .col:nth-child(1) p:before {
+    background-image: url('../img/ico-ubi.svg');
+
+}
+footer .col:nth-child(2) p:before,
+footer .col:nth-child(4) p:before {
+    background-image: url('../img/ico-tel.svg');
+
+}
+footer .col:nth-child(3) p:before {
+    background-image: url('../img/ico-hora.svg');
+
 }
