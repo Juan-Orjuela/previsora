@@ -10,9 +10,13 @@ body {
     text-align: center;
 }
 
+img {
+    max-width: 100%;
+}
+
 /*Banner*/
 #banner {
-    background: #004a28 url('../img/fondo-banner-previsora.jpg') no-repeat center 10%;
+    background: #004a28 url('../img/fondo-banner-previsora.jpg') no-repeat center 30%;
     background-size: cover;
     padding: 15vh 0 10vh;
 }
@@ -289,20 +293,24 @@ h4 {
 .verde {
     color: #00b433;
 }
+
 .cont-contacto .btn {
     background: #00b433;
     color: white;
     margin-top: 1rem;
     width: 100%;
 }
+
 .cont-contacto .small {
     font-style: italic;
     font-size: .6em;
     margin-top: 8px;
 }
-.cont-datos p{
+
+.cont-datos p {
     margin-bottom: 0;
 }
+
 /*Footer*/
 footer {
     background-color: #21252b;
@@ -310,37 +318,44 @@ footer {
     padding: 3rem 0;
     margin-top: 9vh;
 }
+
 footer h4 {
     text-align: center;
     color: white;
     margin-bottom: 3rem;
 }
+
 h5 {
     font-size: 1rem;
     font-weight: 800;
     letter-spacing: 0.02em;
     margin-bottom: 1.5rem;
 }
+
 footer p, footer a {
     font-size: .8rem;
     transition: color .7s ease;
 }
+
 footer a:hover {
     color: #00b433;
 }
+
 footer a {
     color: white;
     text-decoration: underline;
     display: block;
     margin-bottom: 1rem;
 }
+
 footer p {
     position: relative;
 }
+
 footer p:before {
     content: "";
     position: absolute;
-    width:  25px;
+    width: 25px;
     height: 25px;
     background: #00b433 no-repeat center;
     background-size: contain;
@@ -348,16 +363,91 @@ footer p:before {
     border-radius: 100%;
     top: -5px;
 }
-footer .col:nth-child(1) p:before {
+
+footer .row > div:nth-child(1) p:before {
     background-image: url('../img/ico-ubi.svg');
-
 }
-footer .col:nth-child(2) p:before,
-footer .col:nth-child(4) p:before {
+
+footer .row > div:nth-child(2) p:before, footer .row > div:nth-child(4) p:before {
     background-image: url('../img/ico-tel.svg');
-
 }
-footer .col:nth-child(3) p:before {
-    background-image: url('../img/ico-hora.svg');
 
+footer .row > div:nth-child(3) p:before {
+    background-image: url('../img/ico-hora.svg');
+}
+
+/*Responsive*/
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 14px;
+    }
+
+    #banner {
+        padding: 8vh 0 6vh;
+        background-position: center 25%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    #cont-formulario h3 {
+        font-size: 1.5rem;
+    }
+
+    .cont-contacto .small {
+        font-size: .8em;
+    }
+
+    footer .row > div {
+        padding: 0 30px ;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #banner .row .franja-verde {
+        font-size: 1.1rem;
+    }
+
+    /*Cotizador*/
+    #col-2 {
+        margin-top: 7vh;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    #banner img {
+        width: 45vw;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    footer .container {
+        padding: 0 25px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #banner .row .franja-verde {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #banner .row .franja-verde {
+        font-size: .9rem;
+    }
+
+    #cont-formulario {
+        padding: 30px 20px;
+    }
+    #cont-formulario .col-sm-6 {
+        margin-bottom: 12px;
+    }
 }
