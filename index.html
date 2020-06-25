@@ -5,7 +5,8 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap"
+        rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
@@ -16,7 +17,7 @@
 <body>
     <header>
         <div id="encabezado">
-            <img src="img/logo-prov.png" alt="Previsora">
+            <img src="img/LOGO-PREVISORA.svg" alt="Previsora">
         </div>
         <div id="banner">
             <div class="container">
@@ -36,7 +37,7 @@
     <main>
         <div class="container">
             <div class="row">
-                <div id="col-1" class="col-lg-7">
+                <div id="col-1" class="col-lg-6 col-xl-7">
                     <h1>Cotizador Seguro de Automóviles</h1>
                     <h2>Beneﬁcios</h2>
                     <!--Toggle-->
@@ -71,7 +72,7 @@
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         <span>Conductor elegido</span>
-                                        
+
                                     </button>
                                 </h5>
                             </div>
@@ -96,7 +97,7 @@
                                         data-target="#collapseThree" aria-expanded="false"
                                         aria-controls="collapseThree">
                                         <span>Responsabilidad civil extracontractual</span>
-                                        
+
                                     </button>
                                 </h5>
                             </div>
@@ -121,7 +122,7 @@
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                                         <span>Servicio grúa</span>
-                                        
+
                                     </button>
                                 </h5>
                             </div>
@@ -146,7 +147,7 @@
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                                         <span>Vehículo de remplazos</span>
-                                        
+
                                     </button>
                                 </h5>
                             </div>
@@ -171,7 +172,7 @@
                                     <button class="btn btn-link collapsed" data-toggle="collapse"
                                         data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
                                         <span>Asistencia jurídica</span>
-                                        
+
                                     </button>
                                 </h5>
                             </div>
@@ -192,11 +193,376 @@
                     </div>
                     <!--Toggle-->
                 </div>
-                <div id="col-2" class="col-lg-5">
+                <div id="col-2" class="col-lg-6 col-xl-5">
                     <div id="cont-formulario">
                         <h3>Cotiza aquí <br>tu seguro para autos</h3>
                         <div id="bloque-1" class="bloque">
-                            <h4>Datos del propietario</h4>
+
+                            <!-- Formulario Inicio -->
+                            <form id="regForm" action="">
+
+                                <!-- Tab 1 -->
+                                <div class="tab">
+                                    <h4>Datos del propietario</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <input id="nombre" name="nombre" type="text" class="form-control"
+                                                    placeholder="Nombre" oninput="this.className = ''" required>
+                                                <label for="nombre">Nombre</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <input id="apellido" name="apellido" type="text" class="form-control"
+                                                    placeholder="Apellido" oninput="this.className = ''" required>
+                                                <label for="apellido">Apellido</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <select id="tipo_doc" name="tipo_doc" class="custom-select"
+                                                    oninput="this.className = ''" required>
+                                                    <option value="" disabled selected>Selecciona una opción</option>
+                                                    <option value="cc">Cedula de ciudadanía</option>
+                                                    <option value="ce">Cédula de extranjería</option>
+                                                    <option value="pas">Pasaporte</option>
+                                                </select>
+                                                <label for="tipo_doc">Tipo de documento</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <input id="num_doc" name="num_doc" type="text" class="form-control"
+                                                    placeholder="Documento de identidad" oninput="this.className = ''"
+                                                    required>
+                                                <label for="num_doc">Doc. de identidad</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Tab 2 -->
+                                <div class="tab">
+                                    <h4>Datos del propietario</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <input id="fecha_nacimiento" name="fecha_nacimiento" type="date"
+                                                    class="form-control" placeholder="Fecha de nacimiento"
+                                                    oninput="this.className = ''" required>
+                                                <label for="fecha_nacimiento">Fecha</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <select id="genero" name="genero" class="custom-select"
+                                                    oninput="this.className = ''" required>
+                                                    <option value="" disabled selected>Selecciona una opción</option>
+                                                    <option value="fem">Femenino</option>
+                                                    <option value="mas">Masculino</option>
+                                                    
+                                                </select>
+                                                <label for="genero">Género</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <input id="movil" name="movil" type="tel" class="form-control"
+                                                    placeholder="Móvil" oninput="this.className = ''" required>
+                                                <label for="movil">Móvil</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <select class="custom-select" id="ciudad" name="ciudad"
+                                                    oninput="this.className = ''" required>
+                                                    <option value="" disabled selected>Selecciona una opción</option>
+                                                    <option value="ARAUCA">Arauca</option>
+                                                    <option value="ARMENIA">Armenia</option>
+                                                    <option value="BARRANQUILLA">Barranquilla</option>
+                                                    <option value="BOGOTA">Bogotá</option>
+                                                    <option value="BUCARAMANGA">Bucaramanga</option>
+                                                    <option value="BUENAVENTURA">Buenaventura</option>
+                                                    <option value="CALI">Cali</option>
+                                                    <option value="CARTAGENA">Cartagena</option>
+                                                    <option value="CUCUTA">Cúcuta</option>
+                                                    <option value="NEIVA">Neiva</option>
+                                                    <option value="FLORENCIA">Florencia</option>
+                                                    <option value="IBAGUE">Ibagué</option>
+                                                    <option value="MANIZALES">Manizales</option>
+                                                    <option value="MEDELLIN">Medellín</option>
+                                                    <option value="MONTERIA">Montería</option>
+                                                    <option value="MOCOA">Mocoa</option>
+                                                    <option value="PASTO">Pasto</option>
+                                                    <option value="PEREIRA">Pereira</option>
+                                                    <option value="POPAYAN">Popayán</option>
+                                                    <option value="QUIBDO">Quibdó</option>
+                                                    <option value="RIOHACHA">Riohacha</option>
+                                                    <option value="SAN ANDRES">San Andrés</option>
+                                                    <option value="SANTA MARTA">Santa Marta</option>
+                                                    <option value="SINCELEJO">Sincelejo</option>
+                                                    <option value="TUNJA">Tunja</option>
+                                                    <option value="VILLAVICENCIO">Villavicencio</option>
+                                                    <option value="YOPAL">Yopal</option>
+                                                </select>
+                                                <label for="ciudad">Ciudad</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="campo">
+                                                <input id="email" name="email" type="email" class="form-control"
+                                                    placeholder="Correo electrónico" oninput="this.className = ''"
+                                                    required>
+                                                <label for="email">Correo electrónico</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Tab 3 -->
+                                <div class="tab">
+                                    <h4>Datos del vehículo</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <select class="custom-select" id="kilometraje" name="kilometraje"
+                                                    oninput="this.className = ''" required>
+                                                    <option value="" disabled selected>Selecciona una opción</option>
+                                                    <option value="1">Si</option>
+                                                    <option value="0">No</option>
+                                                </select>
+                                                <label for="kilometraje">¿Vehículo 0 km?</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <input id="placa" name="placa" type="text" class="form-control"
+                                                    placeholder="Placa" maxlength="6" oninput="this.className = ''"
+                                                    required>
+                                                <label for="placa">Placa</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <select class="custom-select" id="modelo" name="modelo"
+                                                    oninput="this.className = ''" required>
+                                                    <option value="" disabled selected>Selecciona una opción</option>
+                                                    <option value="2004">2004</option>
+                                                    <option value="2005">2005</option>
+                                                    <option value="2006">2006</option>
+                                                    <option value="2007">2007</option>
+                                                    <option value="2008">2008</option>
+                                                    <option value="2009">2009</option>
+                                                    <option value="2010">2010</option>
+                                                    <option value="2011">2011</option>
+                                                    <option value="2012">2012</option>
+                                                    <option value="2013">2013</option>
+                                                    <option value="2014">2014</option>
+                                                    <option value="2015">2015</option>
+                                                    <option value="2016">2016</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2020">2020</option>
+                                                    <option value="2021">2021</option>
+                                                </select>
+                                                <label for="modelo">Modelo</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+
+                                                <select class="custom-select" id="clase" name="clase"
+                                                    oninput="this.className = ''" required>
+                                                    <option value="" disabled selected>Selecciona una opción</option>
+                                                    <option value="AUTOMOVIL">Automóvil</option>
+                                                    <option value="CAMIONETA PASAJ.">Camioneta Pasaj.</option>
+                                                    <option value="CAMIONETA REPAR">Camioneta Repar</option>
+                                                    <option value="CAMPERO">Campero</option>
+                                                    <option value="PICKUP DOBLE CAB">Pickup Doble Cab</option>
+                                                    <option value="PICKUP SENCILLA">Pickup Sencilla</option>
+                                                </select>
+                                                <label for="clase">Clase</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Tab 4 -->
+                                <div class="tab">
+                                    <h4>Datos del propietario</h4>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <select class="custom-select" id="uso_vehiculo" name="uso_vehiculo"
+                                                    oninput="this.className = ''" required>
+                                                    <option value="" disabled selected>Selecciona una opción</option>
+                                                    <option value="FAMILIAR">Familiar</option>
+                                                    <option value="TRANSPORTE PERSONAS">Transporte Personas</option>
+                                                    <option value="TRANSPORTE CARGA">Transporte Carga</option>
+                                                </select>
+                                                <label for="uso_vehiculo">Uso del vehículo</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <select class="custom-select" id="marca" name="marca"
+                                                    oninput="this.className = ''" required>
+                                                    <option value="" disabled selected>Selecciona una opción</option>
+                                                    <option value="AUDI">Audi</option>
+                                                    <option value="BMW">Bmw</option>
+                                                    <option value="CHANA">Chana</option>
+                                                    <option value="CHANGAN">Changan</option>
+                                                    <option value="CHERY">Chery</option>
+                                                    <option value="CHEVROLET">Chevrolet</option>
+                                                    <option value="CHRYSLER">Chrysler</option>
+                                                    <option value="CITROEN">Citroen</option>
+                                                    <option value="DAIHATSU">Daihatsu</option>
+                                                    <option value="DODGE">Dodge</option>
+                                                    <option value="FIAT">Fiat</option>
+                                                    <option value="FORD">Ford</option>
+                                                    <option value="FOTON">Foton</option>
+                                                    <option value="HAFEI">Hafei</option>
+                                                    <option value="HONDA">Honda</option>
+                                                    <option value="HYUNDAI">Hyundai</option>
+                                                    <option value="JAC">Jac</option>
+                                                    <option value="JEEP">Jeep</option>
+                                                    <option value="KIA">Kia</option>
+                                                    <option value="LAND ROVER">Land Rover</option>
+                                                    <option value="MAHINDRA">Mahindra</option>
+                                                    <option value="MAZDA">Mazda</option>
+                                                    <option value="MERCEDES BENZ">Mercedes Benz</option>
+                                                    <option value="MINI">Mini</option>
+                                                    <option value="MITSUBISHI">Mitsubishi</option>
+                                                    <option value="NISSAN">Nissan</option>
+                                                    <option value="PEUGEOT">Peugeot</option>
+                                                    <option value="RENAULT">Renault</option>
+                                                    <option value="SEAT">Seat</option>
+                                                    <option value="SKODA">Skoda</option>
+                                                    <option value="SUBARU">Subaru</option>
+                                                    <option value="SUZUKI">Suzuki</option>
+                                                    <option value="TOYOTA">Toyota</option>
+                                                    <option value="VOLKSWAGEN">Volkswagen</option>
+                                                    <option value="VOLVO">Volvo</option>
+                                                    <option value="ZOTYE">Zotye</option>
+                                                </select>
+                                                <label for="marca">Marca</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <a class="indicacion" href="#" data-toggle="modal" data-target="#linea-modal">Ver ejemplo</a>
+                                                <input id="linea" name="linea" type="text" class="form-control"
+                                                    placeholder="Línea" oninput="this.className = ''" required>
+
+                                                <label for="linea">
+                                                    Línea
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="campo">
+                                                <select class="custom-select" id="servicio" name="servicio"
+                                                    oninput="this.className = ''" required>
+                                                    <option value="" disabled selected>Selecciona una opción</option>
+                                                    <option value="PARTICULAR">Particular</option>
+                                                    <option value="PUBLICO">Público</option>
+                                                </select>
+                                                <label for="servicio">Servicio</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <div class="campo">
+                                                <select class="custom-select" id="zona_circ" name="zona_circ"
+                                                    oninput="this.className = ''" required>
+                                                    <option value="" disabled selected>Selecciona una opción</option>
+                                                    <option value="ARAUCA">Arauca</option>
+                                                    <option value="ARMENIA">Armenia</option>
+                                                    <option value="BARRANQUILLA">Barranquilla</option>
+                                                    <option value="BOGOTA">Bogotá</option>
+                                                    <option value="BUCARAMANGA">Bucaramanga</option>
+                                                    <option value="BUENAVENTURA">Buenaventura</option>
+                                                    <option value="CALI">Cali</option>
+                                                    <option value="CARTAGENA">Cartagena</option>
+                                                    <option value="CUCUTA">Cúcuta</option>
+                                                    <option value="NEIVA">Neiva</option>
+                                                    <option value="FLORENCIA">Florencia</option>
+                                                    <option value="IBAGUE">Ibagué</option>
+                                                    <option value="MANIZALES">Manizales</option>
+                                                    <option value="MEDELLIN">Medellín</option>
+                                                    <option value="MONTERIA">Montería</option>
+                                                    <option value="MOCOA">Mocoa</option>
+                                                    <option value="PASTO">Pasto</option>
+                                                    <option value="PEREIRA">Pereira</option>
+                                                    <option value="POPAYAN">Popayán</option>
+                                                    <option value="QUIBDO">Quibdó</option>
+                                                    <option value="RIOHACHA">Riohacha</option>
+                                                    <option value="SAN ANDRES">San Andrés</option>
+                                                    <option value="SANTA MARTA">Santa Marta</option>
+                                                    <option value="SINCELEJO">Sincelejo</option>
+                                                    <option value="TUNJA">Tunja</option>
+                                                    <option value="VILLAVICENCIO">Villavicencio</option>
+                                                    <option value="YOPAL">Yopal</option>
+                                                </select>
+                                                <label for="zona_circ">Zona de circulación</label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-12">
+                                            <p class="small">Este formato sólo aplica para las marcas relacionadas, si desea mayor información comunicarse con el <strong>#345 opción 3 - 1 - 4</strong></p>
+                                        </div>
+                                    </div>
+                                        <div class="row">
+                                            <div class="col-sm-12">
+                                                <div class="campo">
+                                                    <div class="custom-control custom-checkbox">
+                                                        <input type="checkbox" class="custom-control-input" id="politicas-check">
+                                                        <label class="custom-control-label" for="politicas-check">He leído y acepto las condiciones de tratamiento de datos personales. <a href="#" data-toggle="modal" data-target="#politicas-modal">VER POLÍTICAS</a></label>
+                                                      </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    
+                                </div>
+                                <!-- Nav -->
+                                <div id="nav-form" style="overflow:auto;">
+                                    <div style="float:right;">
+                                        <button class="btn btn-prev" type="button" id="prevBtn"
+                                            onclick="nextPrev(-1)">Regresar</button>
+                                        <button class="btn" type="button" id="nextBtn"
+                                            onclick="nextPrev(1)">Continuar</button>
+                                    </div>
+                                </div>
+
+                                <!-- Circles which indicates the steps of the form: -->
+                                <div id="steps" style="text-align:center; margin-top:40px;">
+                                    <span class="step">1</span>
+                                    <span class="step">2</span>
+                                    <span class="step">3</span>
+                                    <span class="step">4</span>
+                                </div>
+
+                            </form>
+
+                            <!-- Formulario Fin -->
+                            <!--                                FORMULARIO ANTERIOR
                             <form>
                                 <div class="row">
                                     <div class="col-sm-6">
@@ -225,6 +591,7 @@
                                     </div>
                                 </div>
                             </form>
+                        -->
                         </div>
                     </div>
                     <!--Fornulario-->
@@ -253,65 +620,135 @@
                 </div>
             </div>
         </div>
+        <!--Modal ejemplo línea-->
+        <div class="modal fade" id="linea-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Ejemplo de Línea</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <img src="img/linea-ejemplo.png" alt="Línea">
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!--Modal políticas-->
+        <div class="modal fade" id="politicas-modal" tabindex="-1" role="dialog" aria-labelledby="modal-tit-linea" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="modal-tit-linea">Política de tratamiento de datos personales</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <p>Autorizo expresamente a La Previsora S.A, Compañía de Seguros. con NIT. 860002400-2 como responsable del tratamiento de la información, para utilizar nombre, teléfono de contacto, correo electrónico y demás datos personales compartidos con la compañía por medio de este formulario con el fin de a) Realizar gestiones de conocimiento al cliente y verificación o actualización de información a través de correo electrónico, mensajes de texto MMS/SMS y/o telefónicamente; b) Tramitar mis solicitudes o recibir información general sobre automóviles, SOAT, hogar, áreas comunes y otros ramos c) Enviar correspondencia, correos electrónico, mensajes de texto (SMS) o hacer contacto telefónico en desarrollo de actividades publicitarias, de mercadeo, ofrecimiento de productos o servicios nuevos y actuales considerados de su interés; d) Compartir esta información con terceros conforme se haga necesario para realizar actividades comprendidas dentro de su objeto social y/o para el ejercicio de actividades relacionadas con estas mismas finalidades; e) Realizar encuestas de satisfacción y percepción sobre los productos y servicios de la compañía por cualquier medio; f) Para la prestación de todos los servicios convenidos dentro del contrato de seguros en caso que tenga la calidad de asegurado o beneficiario; g) atender requerimientos de autoridades en ejercicio de sus funciones; h) conservarla para fines históricos y/o estadísticos. Especialmente declaro que he recibido información sobre el carácter facultativo de la respuesta a las preguntas que me sean efectuadas, cuando estas versen sobre datos sensibles o sobre datos de niñas, niños y adolescentes, y que de acuerdo con la legislación colombiana vigente en materia de protección de datos personales, como titular de la información tengo derecho a conocer, actualizar, rectificar y suprimir mis datos personales, esto último, en caso de ser posible, al no mediar una relación contractual o legal que impida el retiro de la información, enviando solicitud al correo electrónicocontactenos@previsora.gov.co, enviando comunicación escrita a la Calle 57 # 9 – 07 en Bogotá, en el teléfono 3487555 o a través del sistema PQR disponible en la página WEB www.previsora.gov.co . Que como titular de los datos me asisten los derechos establecidos en la ley 1581 de 2012 y sus Decretos reglamentarios o demás normas que la modifiquen, adicionen o complementen, en especial los derechos a: a) Conocer, actualizar y rectificar mis datos b) Solicitar prueba de la autorización otorgada; c) Ser informado del uso que le ha dado a sus datos personales; d) Presentar ante la Superintendencia de Industria y Comercio quejas por infracciones a las disposiciones legales vigentes e) Revocar la autorización y/o solicitar la supresión del dato cuando en el Tratamiento no se respeten los principios, derechos y garantías constitucionales y legales. f) Acceder en forma gratuita a mis datos personales que hayan sido objeto de Tratamiento al menos una vez cada mes calendario y cada vez que existan modificaciones sustanciales de las Políticas de Tratamiento de la información que motiven nuevas consultas. Dejo constancia que se me ha suministrado información comprensible en torno a mis derechos referentes con el tratamiento de mi información personal, en particular el de presentar consultas, peticiones y quejas. Para más información sobre la Política de privacidad de la compañía, así como los derechos de los titulares de la información y la manera de ejercerlos es posible acceder a la página de internet www.previsora.gov.co.</p>
+                </div>
+                
+              </div>
+            </div>
+          </div>
     </main>
     <footer>
         <div class="container">
-        <div class="row">
-            <div class="col">
-                <h4>¿Necesitas ayuda?</h4>
+            <div class="row">
+                <div class="col">
+                    <h4>¿Necesitas ayuda?</h4>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h5>Contáctanos</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <p><strong>Previsora S.A, Compañía de Seguros</strong><br>
+                        <strong>Dirección Casa Matriz:</strong> Calle 57 # 9 -07</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <p><strong>PBX:</strong> +571 348 5757<br>
+                        <strong>Código postal:</strong> 52946</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <p><strong>Horario de atención Casa Matriz:</strong><br>
+                        Lunes a Viernes de 8:00 am a 5:00 pm</p>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <p>
+                        <strong>Servicio al Cliente y Asistencia 24 horas:</strong><br>
+                        Línea Gratuita 01 8000 910 554<br>
+                        Bogotá: +1 348 7555<br>
+                        #345
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h5>Enlaces de interés</h5>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <a href="#">PQRS</a>
+                    <a href="#">Políticas de privacidad de la información</a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="#">Ley de Transparencia</a>
+                    <a href="#">Defensor del consumidor financiero</a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="#">Acceso al correo corporativo</a>
+                    <a href="#">Línea Ética</a>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <a href="#">Aspectos Importantes en el contrato de seguro</a>
+                    <a href="#">Términos y condiciones</a>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col">
-                <h5>Contáctanos</h5>
+        <div id="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <img src="img/vigilado-blanco.svg" alt="Vigilado" class="vigilado">
+                        <div class="redes">
+                            <a class="ico-face" href=""><svg id="Bold" enable-background="new 0 0 24 24" height="512"
+                                    viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z" />
+                                </svg></a>
+                            <a class="ico-link" href=""><svg id="Bold" enable-background="new 0 0 24 24" height="512"
+                                    viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m23.994 24v-.001h.006v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07v-2.185h-4.773v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243v7.801z" />
+                                    <path d="m.396 7.977h4.976v16.023h-4.976z" />
+                                    <path
+                                        d="m2.882 0c-1.591 0-2.882 1.291-2.882 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909c-.001-1.591-1.292-2.882-2.882-2.882z" />
+                                </svg></a>
+                            <a class="ico-twit" href=""><svg id="Bold" enable-background="new 0 0 24 24" height="512"
+                                    viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m21.534 7.113c.976-.693 1.797-1.558 2.466-2.554v-.001c-.893.391-1.843.651-2.835.777 1.02-.609 1.799-1.566 2.165-2.719-.951.567-2.001.967-3.12 1.191-.903-.962-2.19-1.557-3.594-1.557-2.724 0-4.917 2.211-4.917 4.921 0 .39.033.765.114 1.122-4.09-.2-7.71-2.16-10.142-5.147-.424.737-.674 1.58-.674 2.487 0 1.704.877 3.214 2.186 4.089-.791-.015-1.566-.245-2.223-.606v.054c0 2.391 1.705 4.377 3.942 4.835-.401.11-.837.162-1.29.162-.315 0-.633-.018-.931-.084.637 1.948 2.447 3.381 4.597 3.428-1.674 1.309-3.8 2.098-6.101 2.098-.403 0-.79-.018-1.177-.067 2.18 1.405 4.762 2.208 7.548 2.208 8.683 0 14.342-7.244 13.986-14.637z" />
+                                </svg></a>
+                            <a class="ico-inst" href=""><svg id="Bold" enable-background="new 0 0 24 24" height="512"
+                                    viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="m12.004 5.838c-3.403 0-6.158 2.758-6.158 6.158 0 3.403 2.758 6.158 6.158 6.158 3.403 0 6.158-2.758 6.158-6.158 0-3.403-2.758-6.158-6.158-6.158zm0 10.155c-2.209 0-3.997-1.789-3.997-3.997s1.789-3.997 3.997-3.997 3.997 1.789 3.997 3.997c.001 2.208-1.788 3.997-3.997 3.997z" />
+                                    <path
+                                        d="m16.948.076c-2.208-.103-7.677-.098-9.887 0-1.942.091-3.655.56-5.036 1.941-2.308 2.308-2.013 5.418-2.013 9.979 0 4.668-.26 7.706 2.013 9.979 2.317 2.316 5.472 2.013 9.979 2.013 4.624 0 6.22.003 7.855-.63 2.223-.863 3.901-2.85 4.065-6.419.104-2.209.098-7.677 0-9.887-.198-4.213-2.459-6.768-6.976-6.976zm3.495 20.372c-1.513 1.513-3.612 1.378-8.468 1.378-5 0-7.005.074-8.468-1.393-1.685-1.677-1.38-4.37-1.38-8.453 0-5.525-.567-9.504 4.978-9.788 1.274-.045 1.649-.06 4.856-.06l.045.03c5.329 0 9.51-.558 9.761 4.986.057 1.265.07 1.645.07 4.847-.001 4.942.093 6.959-1.394 8.453z" />
+                                    <circle cx="18.406" cy="5.595" r="1.439" /></svg></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-3">
-                <p><strong>Previsora S.A, Compañía de Seguros</strong><br>
-                <strong>Dirección Casa Matriz:</strong> Calle 57 # 9 -07</p>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <p><strong>PBX:</strong> +571 348 5757<br>
-                <strong>Código postal:</strong> 52946</p>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <p><strong>Horario de atención Casa Matriz:</strong><br>
-                Lunes a Viernes de 8:00 am a 5:00 pm</p>
-            </div>
-            <div class="col-md-6 col-lg-3">
-                <p>
-                    <strong>Servicio al Cliente y Asistencia 24 horas:</strong><br>
-                    Línea Gratuita 01 8000 910 554<br>
-                    Bogotá: +1 348 7555<br>
-                    #345
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h5>Enlaces de interés</h5>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-6 col-md-3"> 
-                <a href="#">PQRS</a>
-                <a href="#">Políticas de privacidad de la información</a>
-            </div>
-            <div class="col-sm-6 col-md-3"> 
-                <a href="#">Ley de Transparencia</a>
-                <a href="#">Defensor del consumidor financiero</a>
-            </div>
-            <div class="col-sm-6 col-md-3"> 
-                <a href="#">Acceso al correo corporativo</a>
-                <a href="#">Línea Ética</a>
-            </div>
-            <div class="col-sm-6 col-md-3"> 
-                <a href="#">Aspectos Importantes  en el contrato de seguro</a>
-                <a href="#">Términos y condiciones</a>
-            </div>
-        </div>
-    </div>
     </footer>
 
     <!-- Optional JavaScript -->
@@ -325,6 +762,83 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
         integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
         crossorigin="anonymous"></script>
+    <script type='text/javascript'>
+
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+
+        function showTab(n) {
+            // This function will display the specified tab of the form ...
+            var x = document.getElementsByClassName("tab");
+            x[n].style.display = "block";
+            // ... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "¡Cotizar!";
+                document.getElementById("nextBtn").classList.add("cotizar");
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Continuar";
+                document.getElementById("nextBtn").classList.remove("cotizar");
+            }
+            // ... and run a function that displays the correct step indicator:
+            fixStepIndicator(n)
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("tab");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form... :
+            if (currentTab >= x.length) {
+                //...the form gets submitted:
+                document.getElementById("regForm").submit();
+                return false;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("tab");
+            y = x[currentTab].querySelectorAll("input, select");
+            // A loop that checks every input field in the current tab:
+            for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                    // add an "invalid" class to the field:
+                    y[i].className += " invalid";
+                    // and set the current valid status to false:
+                    valid = false;
+                }
+            }
+            // If the valid status is true, mark the step as finished and valid:
+            if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+            }
+            return valid; // return the valid status
+        }
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps...
+            var i, x = document.getElementsByClassName("step");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+            }
+            //... and adds the "active" class to the current step:
+            x[n].className += " active";
+        }
+    </script>
 </body>
 
 </html>
