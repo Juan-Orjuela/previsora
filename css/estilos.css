@@ -173,7 +173,11 @@ h2 {
 #accordion button[aria-expanded="true"] span:after {
     transform: translateY(-50%) rotate(180deg);
 }
-
+.card-body a {
+    color: #00b433;
+    margin-top: 1rem;
+    display: inline-block;
+}
 /*Posiciones*/
 #accordion button[aria-expanded="true"] span:before {
     background-color: #00b433;
