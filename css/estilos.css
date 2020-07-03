@@ -1,4 +1,5 @@
-@charset "UTF-8"; /*Tipo*/
+@charset "UTF-8"; 
+/*Tipo*/
 body {
     font-family: 'Open Sans', sans-serif;
     color: #4d4d4d;
@@ -31,7 +32,7 @@ img {
 #banner {
     background: #004a28 url('../img/fondo-banner-previsora.jpg') no-repeat center 30%;
     background-size: cover;
-    padding: 15vh 0 10vh;
+    padding: 5vh 0 5vh;
 }
 
 #banner .row {
@@ -495,31 +496,21 @@ footer .row > div:nth-child(3) p:before {
 }
 
 /*FORMULARIO*/
-/* Style the form */
-#regForm {
-}
+
 
 /* Style the input fields */
 input {
-    /*padding: 10px;
-    width: 100%;
-    font-size: 17px;
-    font-family: Raleway;
-    border: 1px solid #aaaaaa;*/
     transition: background-color .3s;
 }
 
-/* Mark input boxes that gets an error on validation: */
 input.invalid, select.invalid {
     background-color: #ffd3c4;
 }
 
-/* Hide all steps by default: */
 .tab {
     display: none;
 }
 
-/* Make circles that indicate the steps of the form: */
 .step {
     height: 25px;
     width: 25px;
@@ -593,43 +584,7 @@ label {
     position: relative;
 }
 
-/**
-* Translate down and scale the label up to cover the placeholder,
-* when following an input (with placeholder-shown support).
-* Also make sure the label is only on one row, at max 2/3rds of the
-* field—to make sure it scales properly and doesn't wrap.
-*/
-/*input:placeholder-shown + label {
-    cursor: text;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transform-origin: left bottom;
-    transform: translate(0, 2.125rem) scale(1.25);
-}*/
-/**
-* By default, the placeholder should be transparent. Also, it should 
-* inherit the transition.
-*/
-/*#cont-formulario ::-webkit-input-placeholder {
-    opacity: 0 ;
-    transition: inherit;
-}*/
-/**
-* Show the placeholder when the input is focused.
-*/
-/*#cont-formulario input:focus::-webkit-input-placeholder {
-    opacity: 1 !important;
-}*/
-/**
-* When the element is focused, remove the label transform.
-* Also, do this when the placeholder is _not_ shown, i.e. when 
-* there's something in the input at all.
-*/
-/*#cont-formulario input:not(:placeholder-shown) + label, #cont-formulario input:focus + label {
-    transform: translate(0, 0) scale(1);
-    cursor: pointer;
-}*/
+
 #cont-formulario label a {
     color: rgb(0, 83, 36);
     text-decoration: underline;
@@ -717,7 +672,12 @@ label {
 
     /*Cotizador*/
     #col-2 {
+        margin-top: 0;
+        order: 1
+    }
+    #col-1 {
         margin-top: 7vh;
+        order: 2
     }
 }
 
