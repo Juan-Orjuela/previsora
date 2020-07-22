@@ -3,7 +3,8 @@
 
 <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+
+    <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;0,800;1,400&display=swap"
         rel="stylesheet">
@@ -192,24 +193,30 @@
                         <div id="bloque-1" class="bloque">
 
                             <!-- Form Inicio -->
-                            <form id="regForm" action="">
-
+                            <form id="regForm"
+                                action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8"
+                                method="POST">
+                                <input type=hidden name="oid" value="00DG0000000jNEM">
+                                <input type=hidden name="retURL" value="http://www.google.com">
                                 <!-- Tab 1 -->
                                 <div class="tab">
                                     <h4>Datos del propietario</h4>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <input id="nombre" name="nombre" type="text" class="form-control"
-                                                    placeholder="Nombre" oninput="this.className = ''" required >
-                                                <label for="nombre">Nombre</label>
+                                                <label for="first_name">Nombre</label>
+                                                <input class="form-control" id="first_name" maxlength="40"
+                                                    name="first_name" size="20" type="text"
+                                                    oninput="this.className = ''" />
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <input id="apellido" name="apellido" type="text" class="form-control"
-                                                    placeholder="Apellido" oninput="this.className = ''" required>
-                                                <label for="apellido">Apellido</label>
+
+                                                <label for="last_name">Apellidos</label>
+                                                <input class="form-control" id="last_name" maxlength="80"
+                                                    name="last_name" size="20" type="text"
+                                                    oninput="this.className = ''" />
                                             </div>
 
                                         </div>
@@ -217,22 +224,32 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <select id="tipo_doc" name="tipo_doc" class="custom-select"
-                                                    oninput="this.className = ''" required>
-                                                    <option value="" disabled selected>Selecciona una opción</option>
-                                                    <option value="cc">Cedula de ciudadanía</option>
-                                                    <option value="ce">Cédula de extranjería</option>
-                                                    <option value="pas">Pasaporte</option>
+                                                <span>Tipo de Identificación:</span>
+                                                <select class="custom-select" id="00NG000000Czexi"
+                                                    name="00NG000000Czexi" title="Tipo de Identificaci�n"
+                                                    oninput="this.className = ''">
+                                                    <option value="">--Ninguno--</option>
+                                                    <option value="NIT">NIT</option>
+                                                    <option value="RUT">RUT</option>
+                                                    <option value="CEDULA DE CIUDADANIA">CEDULA DE CIUDADANIA</option>
+                                                    <option value="CEDULA DE EXTRANJERIA">CEDULA DE EXTRANJERIA</option>
+                                                    <option value="PASAPORTE">PASAPORTE</option>
+                                                    <option value="REGISTRO CIVIL">REGISTRO CIVIL</option>
+                                                    <option value="TARJETA DE IDENTIDAD">TARJETA DE IDENTIDAD</option>
+                                                    <option value="NUIP">NUIP</option>
+                                                    <option value="NIT DE EXTRANJERIA">NIT DE EXTRANJERIA</option>
+                                                    <option value="NO IDENTIFICADO">NO IDENTIFICADO</option>
+                                                    <option value="LIBRETA MILITAR">LIBRETA MILITAR</option>
                                                 </select>
-                                                <label for="tipo_doc">Tipo de documento</label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <input id="num_doc" name="num_doc" type="text" class="form-control"
-                                                    placeholder="Documento de identidad" oninput="this.className = ''"
-                                                    required>
-                                                <label for="num_doc">Doc. de identidad</label>
+
+                                                <span>Número de Identificación:</span>
+                                                <input class="form-control" id="00NG000000CzetV" maxlength="40"
+                                                    name="00NG000000CzetV" size="20" type="text"
+                                                    oninput="this.className = ''" />
                                             </div>
                                         </div>
                                     </div>
@@ -243,77 +260,80 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <input id="fecha_nacimiento" name="fecha_nacimiento" type="date"
-                                                    class="form-control" placeholder="Fecha de nacimiento"
-                                                    oninput="this.className = ''" required>
-                                                <label for="fecha_nacimiento">Fecha de nacimiento</label>
+
+                                                <span>Fecha de nacimiento:</span>
+                                                <input class="form-control" id="00N0f00000Fpcp2" maxlength="20"
+                                                    name="00N0f00000Fpcp2" size="20" type="text"
+                                                    oninput="this.className = ''" />
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <select id="genero" name="genero" class="custom-select"
-                                                    oninput="this.className = ''" required>
-                                                    <option value="" disabled selected>Selecciona una opción</option>
-                                                    <option value="fem">Femenino</option>
-                                                    <option value="mas">Masculino</option>
 
+                                                <span>Género:</span>
+                                                <select class="custom-select" id="00N0f00000FSKY2"
+                                                    name="00N0f00000FSKY2" title="Genero" oninput="this.className = ''">
+                                                    <option value="">--Ninguno--</option>
+                                                    <option value="Masculino">Masculino</option>
+                                                    <option value="Femenino">Femenino</option>
                                                 </select>
-                                                <label for="genero">Género</label>
+
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <input id="movil" name="movil" type="tel" class="form-control"
-                                                    placeholder="Móvil" oninput="this.className = ''" required>
-                                                <label for="movil">Móvil</label>
+
+                                                <label for="mobile">Móvil</label>
+                                                <input class="form-control" id="mobile" maxlength="40" name="mobile"
+                                                    size="20" type="text" oninput="this.className = ''" />
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <select class="custom-select" id="ciudad" name="ciudad"
-                                                    oninput="this.className = ''" required>
-                                                    <option value="" disabled selected>Selecciona una opción</option>
-                                                    <option value="ARAUCA">Arauca</option>
-                                                    <option value="ARMENIA">Armenia</option>
-                                                    <option value="BARRANQUILLA">Barranquilla</option>
-                                                    <option value="BOGOTA">Bogotá</option>
-                                                    <option value="BUCARAMANGA">Bucaramanga</option>
-                                                    <option value="BUENAVENTURA">Buenaventura</option>
-                                                    <option value="CALI">Cali</option>
-                                                    <option value="CARTAGENA">Cartagena</option>
-                                                    <option value="CUCUTA">Cúcuta</option>
-                                                    <option value="NEIVA">Neiva</option>
-                                                    <option value="FLORENCIA">Florencia</option>
-                                                    <option value="IBAGUE">Ibagué</option>
-                                                    <option value="MANIZALES">Manizales</option>
-                                                    <option value="MEDELLIN">Medellín</option>
-                                                    <option value="MONTERIA">Montería</option>
-                                                    <option value="MOCOA">Mocoa</option>
-                                                    <option value="PASTO">Pasto</option>
-                                                    <option value="PEREIRA">Pereira</option>
-                                                    <option value="POPAYAN">Popayán</option>
-                                                    <option value="QUIBDO">Quibdó</option>
-                                                    <option value="RIOHACHA">Riohacha</option>
-                                                    <option value="SAN ANDRES">San Andrés</option>
-                                                    <option value="SANTA MARTA">Santa Marta</option>
-                                                    <option value="SINCELEJO">Sincelejo</option>
-                                                    <option value="TUNJA">Tunja</option>
-                                                    <option value="VILLAVICENCIO">Villavicencio</option>
-                                                    <option value="YOPAL">Yopal</option>
+                                                <span>Ciudad:</span>
+                                                <select class="custom-select" id="00N0f00000Fpco4"
+                                                    name="00N0f00000Fpco4" title="Ciudad" oninput="this.className = ''">
+                                                    <option value="">--Ninguno--</option>
+                                                    <option value="ARAUCA">ARAUCA</option>
+                                                    <option value="ARMENIA">ARMENIA</option>
+                                                    <option value="BARRANQUILLA">BARRANQUILLA</option>
+                                                    <option value="BOGOTA">BOGOTA</option>
+                                                    <option value="BUCARAMANGA">BUCARAMANGA</option>
+                                                    <option value="BUENAVENTURA">BUENAVENTURA</option>
+                                                    <option value="CALI">CALI</option>
+                                                    <option value="CARTAGENA">CARTAGENA</option>
+                                                    <option value="CUCUTA">CUCUTA</option>
+                                                    <option value="FLORENCIA">FLORENCIA</option>
+                                                    <option value="IBAGUE">IBAGUE</option>
+                                                    <option value="MANIZALES">MANIZALES</option>
+                                                    <option value="MEDELLIN">MEDELLIN</option>
+                                                    <option value="MOCOA">MOCOA</option>
+                                                    <option value="MONTERIA">MONTERIA</option>
+                                                    <option value="NEIVA">NEIVA</option>
+                                                    <option value="PASTO">PASTO</option>
+                                                    <option value="PEREIRA">PEREIRA</option>
+                                                    <option value="POPAYAN">POPAYAN</option>
+                                                    <option value="QUIBDO">QUIBDO</option>
+                                                    <option value="RIOHACHA">RIOHACHA</option>
+                                                    <option value="SAN ANDRES">SAN ANDRES</option>
+                                                    <option value="SANTA MARTA">SANTA MARTA</option>
+                                                    <option value="SINCELEJO">SINCELEJO</option>
+                                                    <option value="TUNJA">TUNJA</option>
+                                                    <option value="VILLAVICENCIO">VILLAVICENCIO</option>
+                                                    <option value="YOPAL">YOPAL</option>
                                                 </select>
-                                                <label for="ciudad">Ciudad</label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="campo">
-                                                <input id="email" name="email" type="email" class="form-control"
-                                                    placeholder="Correo electrónico" oninput="this.className = ''"
-                                                    required>
+
                                                 <label for="email">Correo electrónico</label>
+                                                <input class="form-control" id="email" maxlength="80" name="email"
+                                                    size="20" type="text" oninput="this.className = ''" />
                                             </div>
                                         </div>
 
@@ -325,21 +345,22 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <select class="custom-select" id="kilometraje" name="kilometraje"
-                                                    oninput="this.className = ''" required>
-                                                    <option value="" disabled selected>Selecciona una opción</option>
-                                                    <option value="1">Si</option>
-                                                    <option value="0">No</option>
-                                                </select>
-                                                <label for="kilometraje">¿Vehículo 0 km?</label>
+
+                                                <div class="form-check">
+                                                    <input class="form-check-input" id="00N0f00000FpcnL" name="00N0f00000FpcnL" type="checkbox" value="1"
+                                                        />
+                                                    <label class="form-check-label" for="00N0f00000FpcnL">
+                                                        Vehículo Cero kilometros:
+                                                    </label>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <input id="placa" name="placa" type="text" class="form-control"
-                                                    placeholder="Placa" maxlength="6" oninput="this.className = ''"
-                                                    required>
-                                                <label for="placa">Placa</label>
+                                                <span>Placa:</span>
+                                                <input class="form-control" id="00N0f00000Fpcnk" maxlength="6"
+                                                    name="00N0f00000Fpcnk" size="20" type="text"
+                                                    oninput="this.className = ''" />
                                             </div>
 
                                         </div>
@@ -347,9 +368,11 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <select class="custom-select" id="modelo" name="modelo"
-                                                    oninput="this.className = ''" required>
-                                                    <option value="" disabled selected>Selecciona una opción</option>
+
+                                                <span>Modelo:</span>
+                                                <select class="custom-select" id="00N0f00000FpcnQ"
+                                                    name="00N0f00000FpcnQ" title="Modelo" oninput="this.className = ''">
+                                                    <option value="">--Ninguno--</option>
                                                     <option value="2004">2004</option>
                                                     <option value="2005">2005</option>
                                                     <option value="2006">2006</option>
@@ -367,25 +390,24 @@
                                                     <option value="2018">2018</option>
                                                     <option value="2019">2019</option>
                                                     <option value="2020">2020</option>
-                                                    <option value="2021">2021</option>
                                                 </select>
-                                                <label for="modelo">Modelo</label>
+
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="campo">
-
-                                                <select class="custom-select" id="clase" name="clase"
-                                                    oninput="this.className = ''" required>
-                                                    <option value="" disabled selected>Selecciona una opción</option>
-                                                    <option value="AUTOMOVIL">Automóvil</option>
-                                                    <option value="CAMIONETA PASAJ.">Camioneta Pasaj.</option>
-                                                    <option value="CAMIONETA REPAR">Camioneta Repar</option>
-                                                    <option value="CAMPERO">Campero</option>
-                                                    <option value="PICKUP DOBLE CAB">Pickup Doble Cab</option>
-                                                    <option value="PICKUP SENCILLA">Pickup Sencilla</option>
+                                                <span>Clase:</span>
+                                                <select class="custom-select" id="00N0f00000Fpcnp"
+                                                    name="00N0f00000Fpcnp" title="Clase" oninput="this.className = ''">
+                                                    <option value="">--Ninguno--</option>
+                                                    <option value="AUTOMOVIL">AUTOMOVIL</option>
+                                                    <option value="CAMIONETA PASAJ.">CAMIONETA PASAJ.</option>
+                                                    <option value="CAMIONETA REPAR">CAMIONETA REPAR</option>
+                                                    <option value="CAMPERO">CAMPERO</option>
+                                                    <option value="PICKUP DOBLE CAB">PICKUP DOBLE CAB</option>
+                                                    <option value="PICKUP SENCILLA">PICKUP SENCILLA</option>
                                                 </select>
-                                                <label for="clase">Clase</label>
+
                                             </div>
                                         </div>
                                     </div>
@@ -396,84 +418,90 @@
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <select class="custom-select" id="uso_vehiculo" name="uso_vehiculo"
-                                                    oninput="this.className = ''" required>
-                                                    <option value="" disabled selected>Selecciona una opción</option>
-                                                    <option value="FAMILIAR">Familiar</option>
-                                                    <option value="TRANSPORTE PERSONAS">Transporte Personas</option>
-                                                    <option value="TRANSPORTE CARGA">Transporte Carga</option>
+
+                                                <span>Uso del vehículo:</span>
+                                                <select class="custom-select" id="00N0f00000FpcnV"
+                                                    name="00N0f00000FpcnV" title="Uso del vehículo">
+                                                    <option value="">--Ninguno--</option>
+                                                    <option value="FAMILIAR">FAMILIAR</option>
+                                                    <option value="TRANSPORTE PERSONAS">TRANSPORTE PERSONAS</option>
+                                                    <option value="TRANSPORTE  CARGA">TRANSPORTE CARGA</option>
                                                 </select>
-                                                <label for="uso_vehiculo">Uso del vehículo</label>
+
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <select class="custom-select" id="marca" name="marca"
-                                                    oninput="this.className = ''" required>
-                                                    <option value="" disabled selected>Selecciona una opción</option>
-                                                    <option value="AUDI">Audi</option>
-                                                    <option value="BMW">Bmw</option>
-                                                    <option value="CHANA">Chana</option>
-                                                    <option value="CHANGAN">Changan</option>
-                                                    <option value="CHERY">Chery</option>
-                                                    <option value="CHEVROLET">Chevrolet</option>
-                                                    <option value="CHRYSLER">Chrysler</option>
-                                                    <option value="CITROEN">Citroen</option>
-                                                    <option value="DAIHATSU">Daihatsu</option>
-                                                    <option value="DODGE">Dodge</option>
-                                                    <option value="FIAT">Fiat</option>
-                                                    <option value="FORD">Ford</option>
-                                                    <option value="FOTON">Foton</option>
-                                                    <option value="HAFEI">Hafei</option>
-                                                    <option value="HONDA">Honda</option>
-                                                    <option value="HYUNDAI">Hyundai</option>
-                                                    <option value="JAC">Jac</option>
-                                                    <option value="JEEP">Jeep</option>
-                                                    <option value="KIA">Kia</option>
-                                                    <option value="LAND ROVER">Land Rover</option>
-                                                    <option value="MAHINDRA">Mahindra</option>
-                                                    <option value="MAZDA">Mazda</option>
-                                                    <option value="MERCEDES BENZ">Mercedes Benz</option>
-                                                    <option value="MINI">Mini</option>
-                                                    <option value="MITSUBISHI">Mitsubishi</option>
-                                                    <option value="NISSAN">Nissan</option>
-                                                    <option value="PEUGEOT">Peugeot</option>
-                                                    <option value="RENAULT">Renault</option>
-                                                    <option value="SEAT">Seat</option>
-                                                    <option value="SKODA">Skoda</option>
-                                                    <option value="SUBARU">Subaru</option>
-                                                    <option value="SUZUKI">Suzuki</option>
-                                                    <option value="TOYOTA">Toyota</option>
-                                                    <option value="VOLKSWAGEN">Volkswagen</option>
-                                                    <option value="VOLVO">Volvo</option>
-                                                    <option value="ZOTYE">Zotye</option>
+
+                                                <span>Marca:</span>
+                                                <select class="custom-select" id="00N0f00000Fpcnu"
+                                                    name="00N0f00000Fpcnu" title="Marca" oninput="this.className = ''">
+                                                    <option value="">--Ninguno--</option>
+                                                    <option value="AUDI">AUDI</option>
+                                                    <option value="BMW">BMW</option>
+                                                    <option value="CHANA">CHANA</option>
+                                                    <option value="CHANGAN">CHANGAN</option>
+                                                    <option value="CHERY">CHERY</option>
+                                                    <option value="CHEVROLET">CHEVROLET</option>
+                                                    <option value="CHRYSLER">CHRYSLER</option>
+                                                    <option value="CITROEN">CITROEN</option>
+                                                    <option value="DAIHATSU">DAIHATSU</option>
+                                                    <option value="DODGE">DODGE</option>
+                                                    <option value="FIAT">FIAT</option>
+                                                    <option value="FORD">FORD</option>
+                                                    <option value="FOTON">FOTON</option>
+                                                    <option value="HAFEI">HAFEI</option>
+                                                    <option value="HONDA">HONDA</option>
+                                                    <option value="HYUNDAI">HYUNDAI</option>
+                                                    <option value="JAC">JAC</option>
+                                                    <option value="JEEP">JEEP</option>
+                                                    <option value="KIA">KIA</option>
+                                                    <option value="LAND ROVER">LAND ROVER</option>
+                                                    <option value="MAHINDRA">MAHINDRA</option>
+                                                    <option value="MAZDA">MAZDA</option>
+                                                    <option value="MERCEDES BENZ">MERCEDES BENZ</option>
+                                                    <option value="MINI">MINI</option>
+                                                    <option value="MITSUBISHI">MITSUBISHI</option>
+                                                    <option value="NISSAN">NISSAN</option>
+                                                    <option value="PEUGEOT">PEUGEOT</option>
+                                                    <option value="RENAULT">RENAULT</option>
+                                                    <option value="SEAT">SEAT</option>
+                                                    <option value="SKODA">SKODA</option>
+                                                    <option value="SUBARU">SUBARU</option>
+                                                    <option value="SUZUKI">SUZUKI</option>
+                                                    <option value="TOYOTA">TOYOTA</option>
+                                                    <option value="VOLKSWAGEN">VOLKSWAGEN</option>
+                                                    <option value="VOLVO">VOLVO</option>
+                                                    <option value="ZOTYE">ZOTYE</option>
                                                 </select>
-                                                <label for="marca">Marca</label>
+
+
                                             </div>
                                         </div>
                                     </div>
                                     <div class="row">
                                         <div class="col-sm-6">
                                             <div class="campo">
+
+                                                <span>Línea:</span>
+                                                <input class="form-control" id="00N0f00000Fpcna" maxlength="20"
+                                                    name="00N0f00000Fpcna" size="20" type="text"
+                                                    oninput="this.className = ''" />
                                                 <a class="indicacion" href="#" data-toggle="modal"
                                                     data-target="#linea-modal">Ver ejemplo</a>
-                                                <input id="linea" name="linea" type="text" class="form-control"
-                                                    placeholder="Línea" oninput="this.className = ''" required>
 
-                                                <label for="linea">
-                                                    Línea
-                                                </label>
                                             </div>
                                         </div>
                                         <div class="col-sm-6">
                                             <div class="campo">
-                                                <select class="custom-select" id="servicio" name="servicio"
-                                                    oninput="this.className = ''" required>
-                                                    <option value="" disabled selected>Selecciona una opción</option>
-                                                    <option value="PARTICULAR">Particular</option>
-                                                    <option value="PUBLICO">Público</option>
+                                                <span>Servicio:</span>
+                                                <select class="custom-select" id="00N0f00000Fpcnz"
+                                                    name="00N0f00000Fpcnz" title="Servicio"
+                                                    oninput="this.className = ''">
+                                                    <option value="">--Ninguno--</option>
+                                                    <option value="PARTICULAR">PARTICULAR</option>
+                                                    <option value="PUBLICO">PUBLICO</option>
                                                 </select>
-                                                <label for="servicio">Servicio</label>
                                             </div>
 
                                         </div>
@@ -481,38 +509,39 @@
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="campo">
-                                                <select class="custom-select" id="zona_circ" name="zona_circ"
-                                                    oninput="this.className = ''" required>
-                                                    <option value="" disabled selected>Selecciona una opción</option>
-                                                    <option value="ARAUCA">Arauca</option>
-                                                    <option value="ARMENIA">Armenia</option>
-                                                    <option value="BARRANQUILLA">Barranquilla</option>
-                                                    <option value="BOGOTA">Bogotá</option>
-                                                    <option value="BUCARAMANGA">Bucaramanga</option>
-                                                    <option value="BUENAVENTURA">Buenaventura</option>
-                                                    <option value="CALI">Cali</option>
-                                                    <option value="CARTAGENA">Cartagena</option>
-                                                    <option value="CUCUTA">Cúcuta</option>
-                                                    <option value="NEIVA">Neiva</option>
-                                                    <option value="FLORENCIA">Florencia</option>
-                                                    <option value="IBAGUE">Ibagué</option>
-                                                    <option value="MANIZALES">Manizales</option>
-                                                    <option value="MEDELLIN">Medellín</option>
-                                                    <option value="MONTERIA">Montería</option>
-                                                    <option value="MOCOA">Mocoa</option>
-                                                    <option value="PASTO">Pasto</option>
-                                                    <option value="PEREIRA">Pereira</option>
-                                                    <option value="POPAYAN">Popayán</option>
-                                                    <option value="QUIBDO">Quibdó</option>
-                                                    <option value="RIOHACHA">Riohacha</option>
-                                                    <option value="SAN ANDRES">San Andrés</option>
-                                                    <option value="SANTA MARTA">Santa Marta</option>
-                                                    <option value="SINCELEJO">Sincelejo</option>
-                                                    <option value="TUNJA">Tunja</option>
-                                                    <option value="VILLAVICENCIO">Villavicencio</option>
-                                                    <option value="YOPAL">Yopal</option>
+                                                <span>Zona de circulación:</span>
+                                                <select class="custom-select" id="00N0f00000Fpcnf"
+                                                    name="00N0f00000Fpcnf" title="Zona de circulación"
+                                                    oninput="this.className = ''">
+                                                    <option value="">--Ninguno--</option>
+                                                    <option value="ARAUCA">ARAUCA</option>
+                                                    <option value="ARMENIA">ARMENIA</option>
+                                                    <option value="BARRANQUILLA">BARRANQUILLA</option>
+                                                    <option value="BOGOTA">BOGOTA</option>
+                                                    <option value="BUCARAMANGA">BUCARAMANGA</option>
+                                                    <option value="BUENAVENTURA">BUENAVENTURA</option>
+                                                    <option value="CALI">CALI</option>
+                                                    <option value="CARTAGENA">CARTAGENA</option>
+                                                    <option value="CUCUTA">CUCUTA</option>
+                                                    <option value="FLORENCIA">FLORENCIA</option>
+                                                    <option value="IBAGUE">IBAGUE</option>
+                                                    <option value="MANIZALES">MANIZALES</option>
+                                                    <option value="MEDELLIN">MEDELLIN</option>
+                                                    <option value="MOCOA">MOCOA</option>
+                                                    <option value="MONTERIA">MONTERIA</option>
+                                                    <option value="NEIVA">NEIVA</option>
+                                                    <option value="PASTO">PASTO</option>
+                                                    <option value="PEREIRA">PEREIRA</option>
+                                                    <option value="POPAYAN">POPAYAN</option>
+                                                    <option value="QUIBDO">QUIBDO</option>
+                                                    <option value="RIOHACHA">RIOHACHA</option>
+                                                    <option value="SAN ANDRES">SAN ANDRES</option>
+                                                    <option value="SANTA MARTA">SANTA MARTA</option>
+                                                    <option value="SINCELEJO">SINCELEJO</option>
+                                                    <option value="TUNJA">TUNJA</option>
+                                                    <option value="VILLAVICENCIO">VILLAVICENCIO</option>
+                                                    <option value="YOPAL">YOPAL</option>
                                                 </select>
-                                                <label for="zona_circ">Zona de circulación</label>
                                             </div>
                                         </div>
 
@@ -524,6 +553,7 @@
                                                     4</strong></p>
                                         </div>
                                     </div>
+                                    <!--
                                     <div class="row">
                                         <div class="col-sm-12">
                                             <div class="campo">
@@ -537,9 +567,13 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-
+                                    </div>-->
+                                    <input type="hidden" id="RecordType" name="RecordType" value="012G0000001MMeH" />
+                                    <input type="hidden" id="00NG000000CZOVP" name="00NG000000CZOVP"
+                                        value="Correo electrónico personal" />
+                                    <input type="hidden" id="lead_source" name="lead_source"
+                                        value="Contact Center Web" />
+                                    <input type="hidden" id="Campaign_ID" name="Campaign_ID" value="7010f000001Zm9d" />
                                 </div>
                                 <!-- Nav -->
                                 <div id="nav-form" style="overflow:auto;">
@@ -548,6 +582,7 @@
                                             onclick="nextPrev(-1)">Regresar</button>
                                         <button class="btn" type="button" id="nextBtn"
                                             onclick="nextPrev(1)">Continuar</button>
+                                        <input id="enviar" type="submit" name="submit">
                                     </div>
                                 </div>
 
@@ -570,14 +605,14 @@
                         <h4>Contáctanos</h4>
                         <div class="row">
                             <div class="col"><a href="https://webrtc.millenium.com.co/previsora/videollamada.php"
-                                    class="btn">Video llamada</a>
+                                    class="btn"><img src="img/ico-mensaje.png" alt=""> Video llamada</a>
                                 <p class="small">
                                     Horario de atención: L-V de 8:00am a 5:00pm<br>
                                     Sábado de 8:00am a 3:00pm
                                 </p>
                             </div>
                             <div class="col">
-                                <a href="http://chat.millenium.com.co//previsora.html" class="btn">Chat en línea</a>
+                                <a href="http://chat.millenium.com.co//previsora.html" class="btn"><img src="img/ico-video.png" alt=""> Chat en línea</a>
                             </div>
                         </div>
 
@@ -801,11 +836,13 @@
                 document.getElementById("prevBtn").style.display = "inline";
             }
             if (n == (x.length - 1)) {
-                document.getElementById("nextBtn").innerHTML = "¡Cotizar!";
-                document.getElementById("nextBtn").classList.add("cotizar");
+                document.getElementById("nextBtn").style.display = "none";
+                document.getElementById("enviar").style.display = "inline";
+
             } else {
-                document.getElementById("nextBtn").innerHTML = "Continuar";
-                document.getElementById("nextBtn").classList.remove("cotizar");
+                document.getElementById("nextBtn").style.display = "inline";
+                document.getElementById("enviar").style.display = "none";
+
             }
             // ... and run a function that displays the correct step indicator:
             fixStepIndicator(n)

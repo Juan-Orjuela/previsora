@@ -1,5 +1,4 @@
-@charset "UTF-8"; 
-/*Tipo*/
+@charset "UTF-8"; /*Tipo*/
 body {
     font-family: 'Open Sans', sans-serif;
     color: #4d4d4d;
@@ -174,11 +173,13 @@ h2 {
 #accordion button[aria-expanded="true"] span:after {
     transform: translateY(-50%) rotate(180deg);
 }
+
 .card-body a {
     color: #00b433;
     margin-top: 1rem;
     display: inline-block;
 }
+
 /*Posiciones*/
 #accordion button[aria-expanded="true"] span:before {
     background-color: #00b433;
@@ -278,9 +279,21 @@ input.form-control, input {
     padding: 5px;
     font-size: .85rem;
     color: black;
-    margin-bottom: 24px;
+    margin-bottom: 0;
     width: 100%;
     height: 34px;
+}
+
+input[type="checkbox"] {
+    border: initial;
+    border-bottom: initial;
+    border-radius: initial;
+    padding: initial;
+    font-size: initial;
+    color: initial;
+    margin-bottom: initial;
+    width: initial;
+    height: initial;
 }
 
 .custom-select, select {
@@ -321,6 +334,21 @@ input.form-control, input {
     display: none;
 }
 
+#cont-formulario #enviar {
+    background: #00b433;
+    margin-top: 1rem;
+    color: white;
+    border: 2px solid #00b433;
+    position: relative;
+    padding: 6px 30px 6px 30px;
+    width: initial;
+    min-width: 129px;
+    height: initial;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+
 #cont-formulario #nextBtn:before {
     content: "";
     position: absolute;
@@ -359,6 +387,12 @@ input.form-control, input {
 
 #cont-formulario #nav-form > div {
     width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#cont-formulario #nav-form > div > * {
+    margin: 4px;
 }
 
 /*Datos*/
@@ -496,8 +530,6 @@ footer .row > div:nth-child(3) p:before {
 }
 
 /*FORMULARIO*/
-
-
 /* Style the input fields */
 input {
     transition: background-color .3s;
@@ -551,8 +583,21 @@ form {
 */
 .campo {
     display: flex;
-    flex-flow: column-reverse;
-    margin-bottom: 1em;
+    flex-flow: column;
+    margin-bottom: 32px;
+}
+
+.campo span {
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: bold;
+    font-size: .7rem;
+    color: #00b433;
+    text-align: left;
+    margin: 0;
+    left: 5px;
+    bottom: 5px;
+    position: relative;
 }
 
 /**
@@ -567,8 +612,18 @@ label, input {
 }
 
 input {
-    -webkit-appearance: none;
+    /*-webkit-appearance: none;*/
     cursor: text;
+}
+
+.form-check {
+    position: relative;
+    display: block;
+    text-align: left;
+}
+
+.form-check label {
+    margin-left: 0;
 }
 
 label {
@@ -584,16 +639,14 @@ label {
     position: relative;
 }
 
-
 #cont-formulario label a {
     color: rgb(0, 83, 36);
     text-decoration: underline;
 }
 
-#cont-formulario .tab:nth-child(4) h4 + .row {
+/*#cont-formulario .tab:nth-child(4) h4 + .row {
     margin-bottom: 1.3rem;
-}
-
+}*/
 .modal-header {
     background: #00b433;
     color: white;
@@ -624,15 +677,23 @@ label {
     text-decoration: underline;
     text-align: left;
     position: relative;
-    left: 5px;
+    left: 0;
     font-size: .75rem;
-    top: -20px
+    top: 2px;
 }
 
 .indicacion:hover {
     color: #00b433;
 }
-
+.cont-contacto a img {
+    width: 40px;
+    margin-right: 8px;
+}
+.cont-contacto a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /*Responsive*/
 @media screen and (max-width: 1200px) {
     body {
@@ -675,6 +736,7 @@ label {
         margin-top: 0;
         order: 1
     }
+
     #col-1 {
         margin-top: 7vh;
         order: 2
